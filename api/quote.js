@@ -10,5 +10,5 @@ module.exports = (req, res) => {
     if (err) throw err;
     obj = JSON.parse(data);
   });
-  res.send(obj.quotes[Math.floor(Math.random() * obj.quotes.length)]);
+  res.send(obj);
 };
