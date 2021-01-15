@@ -2,7 +2,7 @@ var express = require("express");
 var fs = require("fs");
 var app = express();
 var obj;
-fs.readFile("_files/quotes.json", "utf8", function (err, data) {
+fs.readFile("api/_files/quotes.json", "utf8", function (err, data) {
   if (err) throw err;
   obj = JSON.parse(data);
 });

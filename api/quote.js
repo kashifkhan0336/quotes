@@ -6,5 +6,6 @@ module.exports = (req, res) => {
     path.join(__dirname, "_files", "quotes.json"),
     "utf8"
   );
-  res.json({ msg: file });
+  var obj = JSON.parse(file);
+  res.json(obj.quotes[Math.floor(Math.random() * obj.quotes.length)]);
 };
